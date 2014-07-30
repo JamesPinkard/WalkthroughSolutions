@@ -7,9 +7,13 @@
             <TabItem Header="Ink API">
                 <StackPanel Background="#FFE5E5E5">
                     <ToolBar Height="60" Width="493">
-                        <RadioButton x:Name="inkRadio" Content="Ink Mode!" Height="50" Width="100"/>
-                        <RadioButton x:Name="selectRadio" Content="Erase Mode!" Height="50" Width="100" />
-                        <RadioButton x:Name="eraseRadio" Content="Select Mode!" Height="50" Width="100"/>
+                        <Border Margin="0,2,0,2.667" Width="300">
+                            <Grid>
+                                <RadioButton x:Name="inkRadio" Content="Ink Mode!" GroupName="InkMode" Margin="0,0,200,0"/>
+                                <RadioButton x:Name="selectRadio" Content="Erase Mode!" GroupName="InkMode" Margin="100,0"/>
+                                <RadioButton x:Name="eraseRadio" Content="Select Mode!" GroupName="InkMode" Margin="200,0,0,0"/>
+                            </Grid>
+                        </Border>
                         <Separator/>
                         <ComboBox x:Name="comboColors" Width="100">
                             <ComboBoxItem Content="Red"/>
