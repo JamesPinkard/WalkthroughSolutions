@@ -16,6 +16,7 @@ using System.IO;
 using System.Windows.Ink;
 using System.Windows.Annotations;
 using System.Windows.Annotations.Storage;
+using System.Windows.Markup;
 
 namespace WpfControlsAndAPIs
 {
@@ -34,6 +35,31 @@ namespace WpfControlsAndAPIs
             this.inkRadio.IsChecked = true;
             PopulateDocument();
             EnableAnnotations();
+
+            // Rig up some Click handlers for the save/load of the flow doc.
+            btnSaveDoc.Click += (o, s) =>
+            {
+                using (FileStream fStream = File.Open("documentData.xaml", FileMode.Create))
+                {
+                    XamlWriter.Save(this.myDocumentReader.Document, fStream);
+                }
+            };
+
+            btnLoadDoc.Click += (o, s) =>
+                {
+                    using (FileStream fStream = File.Open("documentData.xaml", FileMode.Open))
+                    {
+                        try
+                        {
+                            FlowDocument doc = XamlReader.Load(fStream) as FlowDocument;
+                            this.myDocumentReader.Document = doc;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Error Loading Doc!");
+                        }
+                    }
+                };
         }
 
         private void RadioButton_Clicked(object sender, RoutedEventArgs e)

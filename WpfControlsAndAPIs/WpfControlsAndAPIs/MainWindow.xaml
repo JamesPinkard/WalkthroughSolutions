@@ -49,6 +49,10 @@
                                 Command="a:AnnotationService.DeleteStickyNotesCommand"/>
                         <Button BorderBrush="Green" Content="Highlight Text"
                                 Command="a:AnnotationService.CreateHighlightCommand"/>
+                        <Button x:Name="btnSaveDoc" BorderBrush="Blue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                Content="Save Doc" Width="75"/>
+                        <Button x:Name="btnLoadDoc" BorderBrush="Blue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                Content="Load Doc" Width="75"/>
                     </ToolBar>
                     <FlowDocumentReader x:Name="myDocumentReader" Height="269.4">
                         <FlowDocument>
