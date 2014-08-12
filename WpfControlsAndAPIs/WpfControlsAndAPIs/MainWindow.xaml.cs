@@ -31,7 +31,7 @@ namespace WpfControlsAndAPIs
             
             // Be in Ink mode by defualt.
             this.myInkCanvas.EditingMode = InkCanvasEditingMode.Ink;
-            this.comboColors.SelectedIndex = 0;            
+            this.comboColors.SelectedIndex = 0; 
             this.inkRadio.IsChecked = true;
             PopulateDocument();
             EnableAnnotations();
