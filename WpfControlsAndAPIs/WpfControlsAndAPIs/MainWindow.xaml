@@ -80,7 +80,7 @@
                     <!-- The label's content will be bound to the scroll bar! -->
                     <!-- Now both UI elements use the scrollbar's value in unique ways. -->
                     <Label x:Name="labelSBThumb" Height="30" BorderBrush="Blue"
-                           BorderThickness="2" Content="{Binding Value}" />
+                           BorderThickness="2" Content="0" />
                     
                     <!-- The "Path" property is used when you need to specify the subproperty of an object-->
                     <!-- For example Binding Path = MyObject1.MyProperty1.MyObject2.MyProperty2 -->
@@ -89,7 +89,9 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="DataGrid" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="100">
-                <Grid Background="#FFE5E5E5"/>
+                <StackPanel Background="#FFE5E5E5">
+                    <DataGrid x:Name="gridInventory" Height="288"/>
+                </StackPanel>
             </TabItem>
         </TabControl>
 

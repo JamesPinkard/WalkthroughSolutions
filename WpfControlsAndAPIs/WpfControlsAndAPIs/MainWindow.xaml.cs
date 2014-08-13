@@ -35,6 +35,7 @@ namespace WpfControlsAndAPIs
             this.inkRadio.IsChecked = true;
             PopulateDocument();
             EnableAnnotations();
+            SetBindings();
 
             // Rig up some Click handlers for the save/load of the flow doc.
             btnSaveDoc.Click += (o, s) =>
@@ -60,6 +61,20 @@ namespace WpfControlsAndAPIs
                         }
                     }
                 };
+        }
+
+        private void SetBindings()
+        {
+            // Create a Binding object.
+            Binding b = new Binding();
+
+            // Register the converter, source, and path.
+            b.Converter = new MyDoubleConverter();
+            b.Source = this.mySB;
+            b.Path = new PropertyPath("Value");
+
+            // Call the SetBinding Method on the Label.
+            this.labelSBThumb.SetBinding(Label.ContentProperty, b);
         }
 
         private void RadioButton_Clicked(object sender, RoutedEventArgs e)
