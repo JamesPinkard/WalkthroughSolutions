@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ThinkLikeAProgrammer
 {
@@ -10,85 +11,52 @@ namespace ThinkLikeAProgrammer
     {
         static void Main(string[] args)
         {
-            PrintHalfFiveHashSquare();
-            PrintHashTriangle();
+            /*
+            HashImages.PrintHalfFiveHashSquare();
+            HashImages.PrintHashTriangle();
+            */
+            
 
-            int num = convertCharToInt('5');
-            Console.WriteLine(num);
+            Console.WriteLine( Directory.GetCurrentDirectory());
+            
+            int[] myNums = new int[] { 1, 2, 3, 4, 5,7,3,7,8,7, 6, 7, 8, 9, 10 };
+
+            var uniqueInt = myNums.Distinct();
+
+            Dictionary<int, int> numCount = new Dictionary<int, int>();
+
+            foreach (var num in uniqueInt)
+            {
+                numCount.Add(num, myNums.Where(x=>x==num).Count());
+            }
+
+            int modeCount = 0;
+            int mode=0;
+
+            foreach (var pair in numCount)
+            {
+                if (modeCount <= pair.Value)
+                {
+                    modeCount = pair.Value;
+                    mode = pair.Key;
+                }
+            }
+
+            Console.WriteLine(mode.ToString());
+
+
+
             Console.ReadKey();
         }
 
-        public static void PrintHalfFiveHashSquare()
+        public void SixDigitTest()
         {
-            PrintDecreasingHashes(5);
-            
-        }
-
-        private static void PrintDecreasingHashes(int numOfLines)
-        {
-            for (int i = numOfLines - 1; i >= 0; i--)
-            {
-                for (int num = 0; num < i + 1; num++)
-                {
-                    Console.Write('#');
-                }
-                Console.Write('\n');
-            }
-        }
-
-        public static void PrintHashTriangle()
-        {
-            // int maxHash = 4;
-            // PrintIncreasingHashes(maxHash);
-            // PrintDecreasingHashes(maxHash - 1);
-
-            PrintHillOfHashes(4);
-        }
-
-        private static void PrintHillOfHashes(int maxHashNum)
-        {
-            int numOflines = (maxHashNum * 2) - 1;
-            for (int i = 0; i < numOflines; i++)
-            {
-                for (int num = 0; num < 4 - Math.Abs(4 - (i+1)) ; num++)
-                {
-                    Console.Write('#');
-                }
-                Console.Write('\n');
-            }
-        }
-
-        private static void PrintIncreasingHashes(int numOfLines)
-        {
-            for (int i = 0; i < numOfLines; i++)
-            {
-                for (int num = 0; num < i + 1; num++)
-                {
-                    Console.Write('#');
-                }
-                Console.Write('\n');
-            }
-        }
-
-        private static int doubleDigitSum(int num)
-        {
-            int doubledDigit = num * 2;
-            int sum;
-            if (doubledDigit >= 10)
-            {
-                sum = 1 + doubledDigit % 10;
-            }
-            else
-            {
-                sum = doubledDigit;
-            }
-            return sum;
-        }
-
-        private static int convertCharToInt(char digit)
-        {
-            int num = digit - '0';
-            return num;
+            int num = LuhnCheckSumValidation.convertCharToInt('5');
+            Console.WriteLine(num);
+            LuhnCheckSumValidation.ReadSixDigitID();
         }
     }
 }
+
+
+
