@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>f3425b2b-020f-43d7-8977-e19f23092e44</ProjectGuid>
+    <ProjectGuid>{7A7800C5-074E-4BCD-978D-58989C376816}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FunWithGenericCollections</RootNamespace>
@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortPeopleByAge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
