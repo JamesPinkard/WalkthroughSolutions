@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDelegate", "AsyncDelegate\AsyncDelegate.csproj", "{BC548755-60EA-4397-B800-00F2CD07F58B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParallelismWithForEach", "DataParallelismWithForEach\DataParallelismWithForEach.csproj", "{52BF27C5-175E-4075-96D0-3AEAC16F509A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithCSharpAsync", "FunWithCSharpAsync\FunWithCSharpAsync.csproj", "{FC427BF6-92A1-44A5-94EB-252141A0832B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedPrinting", "MultiThreadedPrinting\MultiThreadedPrinting.csproj", "{6669958F-D55C-4AAD-B182-4918EC1C1C97}"
@@ -32,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadStats", "ThreadStats\ThreadStats.csproj", "{76A91267-F3BB-4AE2-ADEB-96AC1EB605F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerApp", "TimerApp\TimerApp.csproj", "{19C44ECB-A405-47FB-8CBD-39939F9DB916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParallelismWithForEach", "DataParallelismWithForEach\DataParallelismWithForEach.csproj", "{E44BC6DA-4FF6-46F4-BB60-9E78153B3789}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,6 @@ Global
 		{BC548755-60EA-4397-B800-00F2CD07F58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC548755-60EA-4397-B800-00F2CD07F58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC548755-60EA-4397-B800-00F2CD07F58B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52BF27C5-175E-4075-96D0-3AEAC16F509A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52BF27C5-175E-4075-96D0-3AEAC16F509A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52BF27C5-175E-4075-96D0-3AEAC16F509A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52BF27C5-175E-4075-96D0-3AEAC16F509A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC427BF6-92A1-44A5-94EB-252141A0832B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FC427BF6-92A1-44A5-94EB-252141A0832B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC427BF6-92A1-44A5-94EB-252141A0832B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -99,6 +95,10 @@ Global
 		{19C44ECB-A405-47FB-8CBD-39939F9DB916}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C44ECB-A405-47FB-8CBD-39939F9DB916}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C44ECB-A405-47FB-8CBD-39939F9DB916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E44BC6DA-4FF6-46F4-BB60-9E78153B3789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44BC6DA-4FF6-46F4-BB60-9E78153B3789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44BC6DA-4FF6-46F4-BB60-9E78153B3789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44BC6DA-4FF6-46F4-BB60-9E78153B3789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
