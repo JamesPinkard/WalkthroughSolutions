@@ -7,7 +7,12 @@ namespace CreationalPatterns
 {
     public class Wall : MapSite
     {
-        public void Enter()
+        public Wall()
+        {
+
+        }
+
+        public override void Enter()
         {
             throw new System.NotImplementedException();
         }

@@ -7,9 +7,9 @@ namespace CreationalPatterns
 {
     public class MapSite
     {
-        public void Enter()
+        public virtual void Enter()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

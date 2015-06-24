@@ -7,25 +7,16 @@ namespace CreationalPatterns
 {
     public class Maze
     {
-        public Room Room
+        private readonly Dictionary<int, Room> _rooms = new Dictionary<int, Room>();        
+
+        public void AddRoom(Room room)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            _rooms[room.RoomNumber] = room;
         }
 
-        public void AddRoom()
+        public Room RoomNumber(int roomNumber)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void RoomNo()
-        {
-            throw new System.NotImplementedException();
+            return _rooms[roomNumber];
         }
     }
 }
